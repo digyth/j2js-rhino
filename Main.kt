@@ -37,6 +37,10 @@ class Main {
             return run(file.readText(),className)
         }
 
+        /***
+         * @param str java source code
+         * @param className the name of main class
+         */
         fun run(str: String, className: String): String {
             val unit = StaticJavaParser.parse(str)
             this.className = className
